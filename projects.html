@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Student Projects &#8211; AIoT 2026 | Universidad de La Sabana</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#003087;--gold:#F5A800;--navy-dark:#001d54;--navy-light:#e8edf7;--gray-bg:#f7f8fa;--white:#fff;--text:#1a1a2e;--text-mid:#4a5568;--text-lt:#718096;--border:#e2e8f0;--gold-lt:#fff8e6;}
+    *{box-sizing:border-box;margin:0;}
+    body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;}
+    nav{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:3px solid var(--gold);box-shadow:0 2px 12px rgba(0,48,135,.2);}
+    nav a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .15s;}
+    nav a:hover,nav a.active{color:var(--gold);}
+    .container{max-width:1100px;margin:0 auto;padding:0 1.5rem;}
+    .section-label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+    .gold-bar{height:4px;background:var(--gold);border-radius:2px;width:48px;margin-bottom:1rem;}
+    .card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1.5rem;transition:box-shadow .2s,transform .2s,border-color .2s;}
+    .card:hover{box-shadow:0 6px 24px rgba(0,48,135,.1);transform:translateY(-2px);border-color:rgba(0,48,135,.2);}
+    .mod-pill{background:var(--navy-light);border:1px solid rgba(0,48,135,.2);color:var(--navy);border-radius:4px;padding:.15rem .6rem;font-size:.72rem;font-weight:700;display:inline-block;}
+    .tag{display:inline-block;padding:.18rem .6rem;border-radius:100px;font-size:.72rem;font-weight:500;}
+    .tag-navy{background:var(--navy-light);color:var(--navy);border:1px solid rgba(0,48,135,.15);}
+    .tag-gold{background:var(--gold-lt);color:#92640a;border:1px solid rgba(245,168,0,.3);}
+    .tag-gray{background:#f1f5f9;color:var(--text-mid);border:1px solid var(--border);}
+    .pdf-btn{display:inline-flex;align-items:center;gap:.35rem;background:var(--navy);color:white;padding:.35rem .8rem;border-radius:4px;font-size:.75rem;font-weight:600;text-decoration:none;transition:background .15s;margin-top:.8rem;}
+    .pdf-btn:hover{background:var(--navy-dark);}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.5rem;">
+    <a href="index.html" style="display:flex;align-items:center;gap:.8rem;text-decoration:none;">
+      <div style="background:var(--gold);border-radius:5px;width:36px;height:36px;display:grid;place-items:center;flex-shrink:0;"><span style="font-weight:800;font-size:.85rem;color:var(--navy-dark);">AI</span></div>
+      <div style="line-height:1.2;"><div style="color:white;font-weight:700;font-size:.95rem;">AIoT Course</div><div style="color:rgba(255,255,255,.42);font-size:.7rem;">Universidad de La Sabana</div></div>
+    </a>
+    <div style="display:flex;gap:1.8rem;">
+      <a href="index.html">Home</a><a href="syllabus.html">Syllabus</a><a href="projects.html" class="active">Projects</a>
+    </div>
+  </div>
+</nav>
+
+<div style="background:var(--navy);padding:4rem 1.5rem 3rem;border-bottom:3px solid var(--gold);">
+  <div class="container">
+    <p class="section-label" style="color:var(--gold);margin-bottom:.4rem;">Cohort 2026</p>
+    <div class="gold-bar"></div>
+    <h1 style="font-family:'Libre Baskerville',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:white;line-height:1.15;margin-bottom:.8rem;">Student Final Projects</h1>
+    <p style="color:rgba(255,255,255,.65);max-width:600px;font-size:.95rem;">Nine teams. Nine deployed AIoT systems. Each built a custom dataset, trained a model on Edge Impulse, and ran inference on the XIAO ESP32-S3 Sense &#8212; entirely at the edge.</p>
+  </div>
+</div>
+
+<div style="padding:3.5rem 1.5rem 5rem;background:var(--gray-bg);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1.4rem;">
+
+      <!-- PF1 -->
+      <div class="card">
+        <div style="margin-bottom:.8rem;"><span class="mod-pill">PF-01</span></div>
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.3;">AnalogLink Sentinel</h3>
+        <p style="color:var(--text-mid);font-size:.83rem;margin-bottom:.9rem;">Non-invasive pressure gauge digitization via image classification on ESP32-S3 Sense. 6-class CNN with int8 quantization, OLED display, and Ubidots dashboard.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem;"><span class="tag tag-navy">Image Classification</span><span class="tag tag-gray">Industry 4.0</span></div>
+        <div style="font-size:.73rem;color:var(--text-lt);font-style:italic;margin-bottom:.6rem;">Duarte Pe&#241;a, D.A. &#183; Herrera Garc&#237;a, W.F.</div>
+        <a href="PF2026/PF120261.pdf" target="_blank" class="pdf-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>View PDF</a>
+      </div>
+
+      <!-- PF2 -->
+      <div class="card">
+        <div style="margin-bottom:.8rem;"><span class="mod-pill">PF-02</span></div>
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.3;">Reactive Autonomous Vehicle</h3>
+        <p style="color:var(--text-mid);font-size:.83rem;margin-bottom:.9rem;">TinyML-guided navigation using real-time visual traffic signal classification. Dual-MCU: ESP32-S3 Sense (vision + inference) + ESP32 (motor control via UART).</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem;"><span class="tag tag-navy">Autonomous Robotics</span><span class="tag tag-gray">Dual-MCU</span></div>
+        <div style="font-size:.73rem;color:var(--text-lt);font-style:italic;margin-bottom:.6rem;">Sanchez, D.A. &#183; Lugo Lopez, J.E.</div>
+        <a href="PF2026/PF220261.pdf" target="_blank" class="pdf-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>View PDF</a>
+      </div>
+
+      <!-- PF3 -->
+      <div class="card">
+        <div style="margin-bottom:.8rem;"><span class="mod-pill">PF-03</span></div>
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.3;">Banana Ripeness AIoT Classifier</h3>
+        <p style="color:var(--text-mid);font-size:.83rem;margin-bottom:.9rem;">Embedded CNN for agro-food quality assessment. Classifies three ripeness stages (green, intermediate, ripe) in real time on ESP32-S3 Sense.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem;"><span class="tag tag-navy">Agri-Tech</span><span class="tag tag-gray">Food Quality</span></div>
+        <div style="font-size:.73rem;color:var(--text-lt);font-style:italic;margin-bottom:.6rem;">C&#225;rdenas Beltr&#225;n, M.C. &#183; Castiblanco Morales, D.F.</div>
+        <a href="PF2026/PF320261.pdf" target="_blank" class="pdf-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>View PDF</a>
+      </div>
+
+      <!-- PF4 FEATURED -->
+      <div class="card" style="border-top:3px solid var(--gold);background:var(--gold-lt);">
+        <div style="display:flex;justify-content:space-between;align-items:start;margin-bottom:.8rem;">
+          <span class="mod-pill" style="background:rgba(245,168,0,.15);border-color:rgba(245,168,0,.3);color:#7a5100;">PF-04</span>
+          <span style="background:var(--gold);color:var(--navy-dark);padding:.12rem .6rem;border-radius:3px;font-size:.7rem;font-weight:700;">Featured &#9733; 2026</span>
+        </div>
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.3;">Posture &amp; Fatigue Monitor</h3>
+        <p style="color:var(--text-mid);font-size:.83rem;margin-bottom:.9rem;">Dual MobileNetV2 models + MPU6050 IMU fusion for real-time desk ergonomics monitoring. 4-class posture detection and 3-class fatigue gesture recognition running simultaneously on-device. MQTT &#8594; Ubidots.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem;"><span class="tag tag-navy">Sensor Fusion</span><span class="tag tag-gold">MobileNetV2</span><span class="tag tag-gray">MPU6050</span><span class="tag tag-gray">Occupational Health</span></div>
+        <div style="font-size:.75rem;font-weight:700;color:#16a34a;margin-bottom:.3rem;">&#10003; 99.41% posture &#183; 98.36% gesture &#183; 200&#8211;250ms</div>
+        <div style="font-size:.73rem;color:var(--text-lt);font-style:italic;margin-bottom:.6rem;">Salcedo Valdivieso, R.A. &#183; Barrios Guevara, T.</div>
+        <a href="PF2026/PF420261.pdf" target="_blank" class="pdf-btn" style="background:var(--navy);"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>View PDF</a>
+      </div>
+
+      <!-- PF5 -->
+      <div class="card">
+        <div style="margin-bottom:.8rem;"><span class="mod-pill">PF-05</span></div>
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.3;">Acoustic Cold Chain Quality Control</h3>
+        <p style="color:var(--text-mid);font-size:.83rem;margin-bottom:.9rem;">Non-destructive quality control for frozen lactic acid culture sachets via impact acoustics. ESP32-S3 microphone &#8594; 3-class ML inference at the edge.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem;"><span class="tag tag-navy">Audio ML</span><span class="tag tag-gray">Biotech / Food</span></div>
+        <div style="font-size:.73rem;color:var(--text-lt);font-style:italic;margin-bottom:.6rem;">Monsalve Ar&#233;valo, D. &#183; Angarita P&#225;ez, V.</div>
+        <a href="PF2026/PF520261.pdf" target="_blank" class="pdf-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>View PDF</a>
+      </div>
+
+      <!-- PF6 -->
+      <div class="card">
+        <div style="margin-bottom:.8rem;"><span class="mod-pill">PF-06</span></div>
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.3;">Water Turbidity TinyML Classifier</h3>
+        <p style="color:var(--text-mid);font-size:.83rem;margin-bottom:.9rem;">Replaces expensive nephelometers with a low-cost embedded sensor classifying water turbidity levels for continuous real-time environmental monitoring.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem;"><span class="tag tag-navy">Environmental</span><span class="tag tag-gray">Water Quality</span></div>
+        <div style="font-size:.73rem;color:var(--text-lt);font-style:italic;margin-bottom:.6rem;">Moreno Fontecha, M.A. &#183; Soto Ca&#241;&#243;n, A.F.</div>
+        <a href="PF2026/PF620261.pdf" target="_blank" class="pdf-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>View PDF</a>
+      </div>
+
+      <!-- PF7 -->
+      <div class="card">
+        <div style="margin-bottom:.8rem;"><span class="mod-pill">PF-07</span></div>
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.3;">Smart Solid Waste Classifier</h3>
+        <p style="color:var(--text-mid);font-size:.83rem;margin-bottom:.9rem;">Real-time waste sorting into recyclable / non-recyclable / organic / idle using 1,349 custom images captured with OV2640. INT8 + EON&#8482; Compiler.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem;"><span class="tag tag-navy">Image Classification</span><span class="tag tag-gold">Sustainability</span></div>
+        <div style="font-size:.73rem;color:var(--text-lt);font-style:italic;margin-bottom:.6rem;">Urrego Rodr&#237;guez, S. &#183; Gutierrez de Pi&#241;eres, S.</div>
+        <a href="PF2026/PF720261.pdf" target="_blank" class="pdf-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>View PDF</a>
+      </div>
+
+      <!-- PF8 -->
+      <div class="card">
+        <div style="margin-bottom:.8rem;"><span class="mod-pill">PF-08</span></div>
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.3;">High Andean Forest Species Classification</h3>
+        <p style="color:var(--text-mid);font-size:.83rem;margin-bottom:.9rem;">MobileNetV2 classifies 6 plant species (3 native, 3 invasive) using 1,200 images collected at Neusa Reservoir Park. ThingSpeak cloud monitoring.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem;"><span class="tag tag-navy">Ecology</span><span class="tag tag-gray">MobileNetV2</span></div>
+        <div style="font-size:.73rem;color:var(--text-lt);font-style:italic;margin-bottom:.6rem;">Reyes Gonzalez, G. &#183; Medina Fernandez, M.S.</div>
+        <a href="PF2026/PF820261.pdf" target="_blank" class="pdf-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>View PDF</a>
+      </div>
+
+      <!-- PF9 -->
+      <div class="card">
+        <div style="margin-bottom:.8rem;"><span class="mod-pill">PF-09</span></div>
+        <h3 style="font-size:1.05rem;font-weight:700;color:var(--navy);margin-bottom:.4rem;line-height:1.3;">AURA &#8212; Universal Assistant for the Elderly</h3>
+        <p style="color:var(--text-mid);font-size:.83rem;margin-bottom:.9rem;">Keyword spotting ("AURA" wake word) + activity recognition vision model on ESP32-S3. Designed to assist elderly people living independently via voice interaction.</p>
+        <div style="display:flex;flex-wrap:wrap;gap:.35rem;margin-bottom:.8rem;"><span class="tag tag-navy">KWS + Vision</span><span class="tag tag-gray">Healthcare</span></div>
+        <div style="font-size:.73rem;color:var(--text-lt);font-style:italic;margin-bottom:.6rem;">Chaves Perez, A.M. &#183; Ramirez Munoz, L.M.</div>
+        <a href="PF2026/PF920261.pdf" target="_blank" class="pdf-btn"><svg width="13" height="13" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/></svg>View PDF</a>
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<footer style="background:var(--navy-dark);padding:2rem 1.5rem;text-align:center;border-top:3px solid var(--gold);">
+  <p style="font-size:.8rem;color:rgba(255,255,255,.3);">&#169; 2026 JMALK. All rights reserved.</p>
+</footer>
+<style>:root{--navy-dark:#001d54;}</style>
+</body>
+</html>

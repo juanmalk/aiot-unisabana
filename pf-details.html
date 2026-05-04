@@ -1,0 +1,325 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>AnalogLink Sentinel – Featured Project | AIoT UniSabana</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#003087;--gold:#F5A800;--navy-dark:#001d54;--navy-light:#e8edf7;--gray-bg:#f7f8fa;--white:#fff;--text:#1a1a2e;--text-mid:#4a5568;--text-lt:#718096;--border:#e2e8f0;--gold-lt:#fff8e6;}
+    *{box-sizing:border-box;margin:0;}
+    body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;line-height:1.6;}
+    nav{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:3px solid var(--gold);box-shadow:0 2px 12px rgba(0,48,135,.2);}
+    nav a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .15s;}
+    nav a:hover,nav a.active{color:var(--gold);}
+    .container{max-width:960px;margin:0 auto;padding:0 1.5rem;}
+    .container-wide{max-width:1100px;margin:0 auto;padding:0 1.5rem;}
+    .section-label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+    .gold-bar{height:4px;background:var(--gold);border-radius:2px;width:48px;margin-bottom:1rem;}
+    .card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1.5rem;}
+    .stat-box{background:var(--navy-light);border:1px solid rgba(0,48,135,.12);border-radius:6px;padding:1rem;text-align:center;}
+    .stat-num{font-size:1.5rem;font-weight:700;color:var(--navy);line-height:1;}
+    .tag{display:inline-block;padding:.2rem .7rem;border-radius:100px;font-size:.75rem;font-weight:500;}
+    .tag-navy{background:var(--navy-light);color:var(--navy);border:1px solid rgba(0,48,135,.15);}
+    .tag-gold{background:var(--gold-lt);color:#92640a;border:1px solid rgba(245,168,0,.3);}
+    .tag-gray{background:#f1f5f9;color:var(--text-mid);border:1px solid var(--border);}
+    hr.div{border:none;border-top:1px solid var(--border);margin:3rem 0;}
+    code{font-family:monospace;font-size:.8rem;background:var(--navy-light);padding:.1rem .4rem;border-radius:3px;color:var(--navy);}
+    .codeblock{background:var(--navy);border-radius:6px;padding:1.2rem;font-family:monospace;font-size:.77rem;color:rgba(255,255,255,.65);line-height:1.9;overflow-x:auto;}
+    .codeblock .g{color:var(--gold);}
+    .codeblock .w{color:white;}
+    .btn-primary{background:var(--gold);color:var(--navy-dark);padding:.6rem 1.4rem;border-radius:5px;font-weight:700;text-decoration:none;font-size:.88rem;display:inline-block;transition:background .15s;}
+    .btn-primary:hover{background:#e09800;}
+    .btn-out{border:2px solid var(--navy);color:var(--navy);padding:.55rem 1.2rem;border-radius:5px;font-weight:600;text-decoration:none;font-size:.88rem;display:inline-block;transition:background .15s;}
+    .btn-out:hover{background:var(--navy-light);}
+    .pipeline{display:flex;gap:2px;overflow-x:auto;}
+    .pipe-step{background:var(--gray-bg);border:1px solid var(--border);padding:.9rem;min-width:118px;text-align:center;position:relative;flex:1;transition:background .15s;}
+    .pipe-step:hover{background:var(--navy-light);}
+    .pipe-step:not(:last-child)::after{content:'→';position:absolute;right:-12px;top:50%;transform:translateY(-50%);color:var(--gold);font-size:.9rem;font-weight:700;z-index:1;}
+    .pipe-step:first-child{border-radius:6px 0 0 6px;}
+    .pipe-step:last-child{border-radius:0 6px 6px 0;}
+    .pipe-icon{font-size:1.3rem;margin-bottom:.3rem;}
+    .pipe-label{font-size:.68rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.2rem;}
+    .pipe-val{font-size:.76rem;color:var(--text-lt);}
+    @media(max-width:640px){.pipeline{flex-direction:column}.pipe-step:not(:last-child)::after{content:'↓';right:50%;transform:translateX(50%);top:auto;bottom:-14px;}.two-col{grid-template-columns:1fr!important}.three-col{grid-template-columns:1fr!important}}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container-wide" style="display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.5rem;">
+    <a href="index.html" style="display:flex;align-items:center;gap:.8rem;text-decoration:none;">
+      <div style="background:var(--gold);border-radius:5px;width:36px;height:36px;display:grid;place-items:center;flex-shrink:0;"><span style="font-weight:800;font-size:.85rem;color:var(--navy-dark);">AI</span></div>
+      <div style="line-height:1.2;"><div style="color:white;font-weight:700;font-size:.95rem;">AIoT Course</div><div style="color:rgba(255,255,255,.42);font-size:.7rem;">Universidad de La Sabana</div></div>
+    </a>
+    <div style="display:flex;gap:1.8rem;"><a href="index.html">Home</a><a href="syllabus.html">Syllabus</a><a href="projects.html">Projects</a></div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<div style="background:var(--navy);padding:4.5rem 1.5rem 3.5rem;border-bottom:3px solid var(--gold);position:relative;overflow:hidden;">
+  <div style="position:absolute;width:500px;height:500px;border-radius:50%;background:radial-gradient(circle,rgba(245,168,0,.14) 0%,transparent 70%);top:-150px;right:-100px;pointer-events:none;"></div>
+  <div class="container" style="position:relative;z-index:1;">
+    <div style="margin-bottom:1rem;"><a href="projects.html" style="color:rgba(255,255,255,.4);font-size:.8rem;text-decoration:none;">← All Projects</a> <span style="color:rgba(255,255,255,.25);"> / </span> <span style="color:rgba(255,255,255,.5);font-size:.8rem;">PF-01 · 2026</span></div>
+    <div style="display:inline-block;border:1px solid var(--gold);color:var(--gold);padding:.15rem .7rem;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;font-weight:700;border-radius:2px;margin-bottom:1.2rem;">Featured Project</div>
+    <h1 style="font-family:'Libre Baskerville',serif;font-size:clamp(1.6rem,4vw,2.6rem);font-weight:700;color:white;line-height:1.15;max-width:750px;margin-bottom:.8rem;">AnalogLink Sentinel: Non-Invasive Digitization of Analog Pressure Gauges via AIoT</h1>
+    <p style="font-size:.95rem;color:rgba(255,255,255,.65);max-width:600px;margin-bottom:1.5rem;">A full-stack AIoT solution bridging Industry 4.0's legacy analog infrastructure gap using edge computer vision on a microcontroller the size of a thumb.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:.45rem;margin-bottom:1.5rem;">
+      <span class="tag tag-gold">Computer Vision</span>
+      <span class="tag" style="background:rgba(255,107,53,.15);border:1px solid rgba(255,107,53,.3);color:#ff9a6c;">Edge Impulse</span>
+      <span class="tag" style="background:rgba(255,255,255,.1);border:1px solid rgba(255,255,255,.2);color:rgba(255,255,255,.7);">INT8 Quantization</span>
+      <span class="tag" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.55);">XIAO ESP32-S3</span>
+      <span class="tag" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.55);">Ubidots</span>
+      <span class="tag" style="background:rgba(255,255,255,.07);border:1px solid rgba(255,255,255,.15);color:rgba(255,255,255,.55);">Industry 4.0</span>
+    </div>
+    <p style="font-size:.82rem;color:rgba(255,255,255,.4);font-style:italic;">Duarte Peña, Deiby Alexander · Herrera García, Wilson Ferney<br/>Universidad de La Sabana · Facultad de Ingeniería · AIoT 2026</p>
+  </div>
+</div>
+
+<!-- STATS BAR -->
+<div style="background:var(--navy-light);border-bottom:1px solid var(--border);">
+  <div class="container-wide">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(130px,1fr));">
+      <div style="padding:1.2rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:1.4rem;font-weight:700;color:var(--navy);">98.38%</div><div style="font-size:.73rem;color:var(--text-lt);margin-top:.15rem;">Test Accuracy</div></div>
+      <div style="padding:1.2rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:1.4rem;font-weight:700;color:var(--navy);">846ms</div><div style="font-size:.73rem;color:var(--text-lt);margin-top:.15rem;">Inference Latency</div></div>
+      <div style="padding:1.2rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:1.4rem;font-weight:700;color:var(--navy);">182.8 KB</div><div style="font-size:.73rem;color:var(--text-lt);margin-top:.15rem;">RAM Footprint</div></div>
+      <div style="padding:1.2rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:1.4rem;font-weight:700;color:var(--navy);">−17% RAM</div><div style="font-size:.73rem;color:var(--text-lt);margin-top:.15rem;">EON Optimization</div></div>
+      <div style="padding:1.2rem;text-align:center;border-right:1px solid var(--border);"><div style="font-size:1.4rem;font-weight:700;color:var(--navy);">−12% ROM</div><div style="font-size:.73rem;color:var(--text-lt);margin-top:.15rem;">Flash Savings</div></div>
+      <div style="padding:1.2rem;text-align:center;"><div style="font-size:1.4rem;font-weight:700;color:var(--navy);">900</div><div style="font-size:.73rem;color:var(--text-lt);margin-top:.15rem;">Training Images</div></div>
+    </div>
+  </div>
+</div>
+
+<!-- CONTENT -->
+<div style="padding:4rem 1.5rem;">
+  <div class="container">
+
+    <!-- Abstract -->
+    <div style="margin-bottom:3rem;">
+      <p class="section-label" style="margin-bottom:.4rem;">Abstract</p>
+      <div class="gold-bar"></div>
+      <h2 style="font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:1rem;">The Problem &amp; Solution at a Glance</h2>
+      <div class="card" style="border-left:4px solid var(--gold);background:var(--gold-lt);">
+        <p style="color:var(--text);font-size:.95rem;line-height:1.8;">The transition toward Industry 4.0 is significantly hindered by the prevalence of legacy analog infrastructure lacking connectivity capabilities. This paper presents <strong>AnalogLink Sentinel</strong>, an AIoT solution designed for the non-invasive digitization of analog pressure gauges. The system utilizes the vision sensor of the Seeed Studio XIAO ESP32-S3 Sense to capture gauge imagery, which is processed locally using an image classifier trained on the Edge Impulse platform. Unlike traditional geometric regression methods, this model visually categorizes the needle's status into specific pressure ranges in real-time. The architecture integrates Wi-Fi connectivity for telemetry transmission to Ubidots, local visualization via an OLED display, and physical actuation through relays for alarm management and pump control.</p>
+      </div>
+    </div>
+
+    <hr class="div"/>
+
+    <!-- Three Pillars -->
+    <div style="margin-bottom:3rem;">
+      <p class="section-label" style="margin-bottom:.4rem;">Design Philosophy</p>
+      <div class="gold-bar"></div>
+      <h2 style="font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:1.5rem;">Three Foundational Pillars</h2>
+      <div class="three-col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;">
+        <div class="card" style="border-top:3px solid var(--navy);"><div style="font-size:1.4rem;margin-bottom:.6rem;">⚠️</div><h3 style="font-weight:700;color:var(--navy);margin-bottom:.4rem;">Risk Mitigation</h3><p style="color:var(--text-mid);font-size:.875rem;">Manual data acquisition from analog gauges introduces significant error variability due to fatigue or human misreading. The system eliminates temporal gaps through automated critical-level alerts.</p></div>
+        <div class="card" style="border-top:3px solid var(--navy);"><div style="font-size:1.4rem;margin-bottom:.6rem;">🔩</div><h3 style="font-weight:700;color:var(--navy);margin-bottom:.4rem;">Non-Invasive Architecture</h3><p style="color:var(--text-mid);font-size:.875rem;">Conventional digital transducers require pipe depressurization, welding, and costly plant shutdowns. AnalogLink Sentinel offers an external solution that does not directly impact the process flow.</p></div>
+        <div class="card" style="border-top:3px solid var(--gold);"><div style="font-size:1.4rem;margin-bottom:.6rem;">⚡</div><h3 style="font-weight:700;color:var(--navy);margin-bottom:.4rem;">Energy Efficiency</h3><p style="color:var(--text-mid);font-size:.875rem;">Enables predictive maintenance models using digitized historical data and optimization of pumping control loops based on real demand captured via AI, reducing electrical energy consumption.</p></div>
+      </div>
+    </div>
+
+    <hr class="div"/>
+
+    <!-- Pipeline -->
+    <div style="margin-bottom:3rem;">
+      <p class="section-label" style="margin-bottom:.4rem;">Implementation Pipeline</p>
+      <div class="gold-bar"></div>
+      <h2 style="font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:1.5rem;">From Pixel to Decision</h2>
+      <div class="pipeline" style="gap:2px;">
+        <div class="pipe-step"><div class="pipe-icon">📷</div><div class="pipe-label">Capture</div><div class="pipe-val">OV2640<br/>Camera</div></div>
+        <div class="pipe-step"><div class="pipe-icon">🖼️</div><div class="pipe-label">Preprocess</div><div class="pipe-val">96×96 px<br/>Normalize</div></div>
+        <div class="pipe-step"><div class="pipe-icon">🧠</div><div class="pipe-label">Inference</div><div class="pipe-val">CNN (int8)<br/>EI Model</div></div>
+        <div class="pipe-step"><div class="pipe-icon">📊</div><div class="pipe-label">Classify</div><div class="pipe-val">0–150 psi<br/>6 classes</div></div>
+        <div class="pipe-step"><div class="pipe-icon">📡</div><div class="pipe-label">Telemetry</div><div class="pipe-val">Wi-Fi HTTP<br/>→ Ubidots</div></div>
+        <div class="pipe-step"><div class="pipe-icon">🔔</div><div class="pipe-label">Actuate</div><div class="pipe-val">Relay →<br/>Alarm/Pump</div></div>
+      </div>
+    </div>
+
+    <hr class="div"/>
+
+    <!-- Dataset -->
+    <div style="margin-bottom:3rem;">
+      <p class="section-label" style="margin-bottom:.4rem;">Data Acquisition</p>
+      <div class="gold-bar"></div>
+      <h2 style="font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:1rem;">Custom Industrial Dataset</h2>
+      <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;">
+        <div>
+          <p style="color:var(--text-mid);margin-bottom:1rem;font-size:.9rem;">A balanced dataset was constructed by capturing pressure gauge imagery under diverse lighting conditions and angles to ensure environmental resilience. All images were acquired using the target device itself — the XIAO ESP32-S3 Sense OV2640 camera — minimizing sensor domain gap at deployment.</p>
+          <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;">
+            <div class="stat-box"><div class="stat-num">6</div><div style="font-size:.73rem;color:var(--text-lt);margin-top:.2rem;">Classes (psi)</div></div>
+            <div class="stat-box"><div class="stat-num">150</div><div style="font-size:.73rem;color:var(--text-lt);margin-top:.2rem;">Images / Class</div></div>
+            <div class="stat-box"><div class="stat-num">900</div><div style="font-size:.73rem;color:var(--text-lt);margin-top:.2rem;">Total Images</div></div>
+            <div class="stat-box" style="background:var(--gold-lt);border-color:rgba(245,168,0,.25);"><div class="stat-num" style="color:#92640a;">96×96</div><div style="font-size:.73rem;color:#b07a15;margin-top:.2rem;">Resolution (px)</div></div>
+          </div>
+        </div>
+        <div class="codeblock">
+          <span class="g">// Pressure classes (psi)</span><br/>
+          <span class="w">const char*</span> labels[] = {<br/>
+          &nbsp;&nbsp;<span class="g">"0 psi"</span>, <span class="g">"30 psi"</span>,<br/>
+          &nbsp;&nbsp;<span class="g">"60 psi"</span>, <span class="g">"90 psi"</span>,<br/>
+          &nbsp;&nbsp;<span class="g">"120 psi"</span>, <span class="g">"150 psi"</span><br/>
+          };<br/><br/>
+          <span class="g">// Train / Test split (80/20)</span><br/>
+          <span class="w">train:</span> 720 images (80%)<br/>
+          <span class="w">test:&nbsp;</span> 180 images (20%)
+        </div>
+      </div>
+    </div>
+
+    <hr class="div"/>
+
+    <!-- Training -->
+    <div style="margin-bottom:3rem;">
+      <p class="section-label" style="margin-bottom:.4rem;">Model Training</p>
+      <div class="gold-bar"></div>
+      <h2 style="font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:1rem;">Edge Impulse CNN with EON™ Compiler</h2>
+      <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;">
+        <div>
+          <p style="color:var(--text-mid);margin-bottom:1.2rem;font-size:.9rem;">An image classification model was designed and trained on the Edge Impulse platform, specifically targeting the stringent constraints of the ESP32-S3 Sense. Hyperparameters were carefully tuned to balance diagnostic accuracy against RAM and Flash memory footprint.</p>
+          <div class="card" style="border-left:4px solid var(--navy);">
+            <h3 style="font-size:.9rem;color:var(--navy);font-weight:700;margin-bottom:.6rem;">Training Configuration</h3>
+            <table style="width:100%;font-size:.82rem;">
+              <tr><td style="color:var(--text-lt);padding:.22rem 0;">Training Cycles</td><td style="color:var(--text);text-align:right;font-weight:600;font-family:monospace;">30</td></tr>
+              <tr><td style="color:var(--text-lt);padding:.22rem 0;">Learning Rate</td><td style="color:var(--text);text-align:right;font-weight:600;font-family:monospace;">0.0005</td></tr>
+              <tr><td style="color:var(--text-lt);padding:.22rem 0;">Quantization</td><td style="color:var(--text);text-align:right;font-weight:600;font-family:monospace;">INT8</td></tr>
+              <tr><td style="color:var(--text-lt);padding:.22rem 0;">Compiler</td><td style="color:var(--text);text-align:right;font-weight:600;font-family:monospace;">EON™</td></tr>
+              <tr><td style="color:var(--text-lt);padding:.22rem 0;">Input Size</td><td style="color:var(--text);text-align:right;font-weight:600;font-family:monospace;">96×96 px</td></tr>
+            </table>
+          </div>
+        </div>
+        <div>
+          <div class="card" style="border-left:4px solid var(--gold);background:var(--gold-lt);margin-bottom:1rem;">
+            <h3 style="font-size:.9rem;color:var(--navy);font-weight:700;margin-bottom:.8rem;">EON™ Optimization Results</h3>
+            <div style="display:grid;grid-template-columns:1fr 1fr;gap:.6rem;">
+              <div class="stat-box"><div class="stat-num">−17%</div><div style="font-size:.72rem;color:var(--text-lt);margin-top:.1rem;">RAM Reduction</div></div>
+              <div class="stat-box"><div class="stat-num">−12%</div><div style="font-size:.72rem;color:var(--text-lt);margin-top:.1rem;">ROM Reduction</div></div>
+              <div class="stat-box"><div class="stat-num">182.8 KB</div><div style="font-size:.72rem;color:var(--text-lt);margin-top:.1rem;">Final RAM</div></div>
+              <div class="stat-box" style="background:var(--navy);border-color:var(--navy);"><div class="stat-num" style="color:var(--gold);">98.38%</div><div style="font-size:.72rem;color:rgba(255,255,255,.55);margin-top:.1rem;">Accuracy</div></div>
+            </div>
+          </div>
+          <p style="font-size:.83rem;color:var(--text-mid);">INT8 quantization via EON™ reduced RAM and Flash by <strong style="color:var(--navy);">17% and 12%</strong> respectively without compromising performance. The model runs entirely on the ESP32-S3 with 846ms inference latency.</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="div"/>
+
+    <!-- Architecture -->
+    <div style="margin-bottom:3rem;">
+      <p class="section-label" style="margin-bottom:.4rem;">System Architecture</p>
+      <div class="gold-bar"></div>
+      <h2 style="font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:1.5rem;">Three-Tier Architecture</h2>
+      <div class="three-col" style="display:grid;grid-template-columns:repeat(3,1fr);gap:1.2rem;">
+        <div class="card" style="border-top:4px solid var(--navy);">
+          <p style="font-size:.68rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.09em;margin-bottom:.5rem;">Tier 1 · Local</p>
+          <h3 style="font-weight:700;color:var(--navy);margin-bottom:.4rem;">Edge Inference</h3>
+          <p style="font-size:.83rem;color:var(--text-mid);">Camera captures gauge → 96×96 preprocessing → CNN inference on ESP32-S3 → Confidence-based pressure state → OLED feedback display.</p>
+        </div>
+        <div class="card" style="border-top:4px solid #7c3aed;">
+          <p style="font-size:.68rem;font-weight:700;color:#7c3aed;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.5rem;">Tier 2 · Cloud</p>
+          <h3 style="font-weight:700;color:var(--navy);margin-bottom:.4rem;">IoT Telemetry</h3>
+          <p style="font-size:.83rem;color:var(--text-mid);">Wi-Fi → HTTP protocol → Ubidots IoT platform → Real-time dashboards → Historical data logging → Remote alerting.</p>
+        </div>
+        <div class="card" style="border-top:4px solid var(--gold);">
+          <p style="font-size:.68rem;font-weight:700;color:#92640a;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.5rem;">Tier 3 · Physical</p>
+          <h3 style="font-weight:700;color:var(--navy);margin-bottom:.4rem;">Actuation</h3>
+          <p style="font-size:.83rem;color:var(--text-mid);">Relay module closes control loop → Audible alarms on critical pressure → Backup pump activation when thresholds deviate.</p>
+        </div>
+      </div>
+    </div>
+
+    <hr class="div"/>
+
+    <!-- Firmware -->
+    <div style="margin-bottom:3rem;">
+      <p class="section-label" style="margin-bottom:.4rem;">Firmware</p>
+      <div class="gold-bar"></div>
+      <h2 style="font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:1rem;">Arduino/C++ Integration Snippet</h2>
+      <div class="codeblock">
+        <span class="g">// AnalogLink Sentinel — on-device inference loop (simplified)</span><br/>
+        <span class="w">#include</span> <span class="g">"analoglink_sentinel_inferencing.h"</span><br/>
+        <span class="w">#include</span> <span class="g">&lt;esp_camera.h&gt;</span><br/><br/>
+        <span class="w">void</span> loop() {<br/>
+        &nbsp;&nbsp;<span class="g">// 1. Capture frame from OV2640</span><br/>
+        &nbsp;&nbsp;camera_fb_t *fb = esp_camera_fb_get();<br/><br/>
+        &nbsp;&nbsp;<span class="g">// 2. Run Edge Impulse classifier</span><br/>
+        &nbsp;&nbsp;ei_impulse_result_t result = { 0 };<br/>
+        &nbsp;&nbsp;run_classifier(&amp;signal, &amp;result, false);<br/><br/>
+        &nbsp;&nbsp;<span class="g">// 3. Find highest confidence class</span><br/>
+        &nbsp;&nbsp;<span class="w">float</span> max_val = 0; <span class="w">int</span> max_ix = 0;<br/>
+        &nbsp;&nbsp;for (<span class="w">int</span> i = 0; i &lt; EI_CLASSIFIER_LABEL_COUNT; i++) {<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;if (result.classification[i].value &gt; max_val) {<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;max_val = result.classification[i].value; max_ix = i;<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;}<br/>
+        &nbsp;&nbsp;}<br/><br/>
+        &nbsp;&nbsp;<span class="g">// 4. Display on OLED + send to Ubidots via HTTP</span><br/>
+        &nbsp;&nbsp;displayPressureOLED(ei_classifier_inferencing_categories[max_ix]);<br/>
+        &nbsp;&nbsp;sendToUbidots(max_ix * 30); <span class="g">// psi value (0, 30, 60 ... 150)</span><br/><br/>
+        &nbsp;&nbsp;<span class="g">// 5. Relay actuation for critical thresholds (&gt;= 120 psi)</span><br/>
+        &nbsp;&nbsp;if (max_ix &gt;= 4) activateAlarmRelay();<br/>
+        }
+      </div>
+    </div>
+
+    <hr class="div"/>
+
+    <!-- Results -->
+    <div style="margin-bottom:3rem;">
+      <p class="section-label" style="margin-bottom:.4rem;">Results</p>
+      <div class="gold-bar"></div>
+      <h2 style="font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:1.5rem;">Validation &amp; Performance</h2>
+      <div class="two-col" style="display:grid;grid-template-columns:1fr 1fr;gap:2rem;align-items:start;">
+        <div>
+          <h3 style="font-weight:700;color:var(--navy);margin-bottom:.8rem;">Per-Class Accuracy</h3>
+          <p style="color:var(--text-mid);font-size:.87rem;margin-bottom:1rem;">Overall test accuracy: <strong style="color:var(--navy);">98.38%</strong> across six pressure classes.</p>
+          <div style="display:flex;flex-direction:column;gap:.65rem;">
+            <div><div style="display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:.25rem;"><span style="color:var(--text-mid);">0 psi</span><span style="color:var(--navy);font-weight:700;">100%</span></div><div style="height:7px;background:var(--border);border-radius:3px;"><div style="height:100%;width:100%;background:var(--navy);border-radius:3px;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:.25rem;"><span style="color:var(--text-mid);">30 psi</span><span style="color:var(--navy);font-weight:700;">98%</span></div><div style="height:7px;background:var(--border);border-radius:3px;"><div style="height:100%;width:98%;background:var(--navy);border-radius:3px;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:.25rem;"><span style="color:var(--text-mid);">60 psi</span><span style="color:var(--navy);font-weight:700;">97%</span></div><div style="height:7px;background:var(--border);border-radius:3px;"><div style="height:100%;width:97%;background:var(--navy);border-radius:3px;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:.25rem;"><span style="color:var(--text-mid);">90 psi</span><span style="color:var(--navy);font-weight:700;">99%</span></div><div style="height:7px;background:var(--border);border-radius:3px;"><div style="height:100%;width:99%;background:var(--navy);border-radius:3px;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:.25rem;"><span style="color:var(--text-mid);">120 psi</span><span style="color:var(--navy);font-weight:700;">98%</span></div><div style="height:7px;background:var(--border);border-radius:3px;"><div style="height:100%;width:98%;background:var(--navy);border-radius:3px;"></div></div></div>
+            <div><div style="display:flex;justify-content:space-between;font-size:.78rem;margin-bottom:.25rem;"><span style="color:var(--text-mid);">150 psi</span><span style="color:var(--navy);font-weight:700;">98%</span></div><div style="height:7px;background:var(--border);border-radius:3px;"><div style="height:100%;width:98%;background:var(--navy);border-radius:3px;"></div></div></div>
+          </div>
+        </div>
+        <div>
+          <h3 style="font-weight:700;color:var(--navy);margin-bottom:.8rem;">Deployment Findings</h3>
+          <p style="color:var(--text-mid);font-size:.87rem;margin-bottom:1rem;">On-device validation confirmed high consistency across all pressure classes, with the system maintaining independence from network status during inference.</p>
+          <div class="card" style="border-left:4px solid var(--gold);background:var(--gold-lt);">
+            <p style="font-size:.75rem;font-weight:700;color:#92640a;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.5rem;">⚠ Observed Bottleneck</p>
+            <p style="font-size:.82rem;color:var(--text-mid);">The ESP32-S3 faces overhead when concurrently managing video capture, tensor inference, and HTTP transmission. Future work recommends <strong style="color:var(--navy);">FreeRTOS</strong> task parallelization and replacing HTTP with <strong style="color:var(--navy);">MQTT</strong>.</p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <hr class="div"/>
+
+    <!-- Future Work -->
+    <div style="margin-bottom:3rem;">
+      <p class="section-label" style="margin-bottom:.4rem;">Future Work</p>
+      <div class="gold-bar"></div>
+      <h2 style="font-size:1.4rem;font-weight:700;color:var(--navy);margin-bottom:1.5rem;">Proposed Improvements</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+        <div class="card" style="border-top:3px solid var(--navy);"><p style="font-size:.68rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem;">Firmware</p><h3 style="font-weight:700;color:var(--navy);font-size:.9rem;margin-bottom:.3rem;">FreeRTOS Integration</h3><p style="font-size:.82rem;color:var(--text-mid);">Parallelize inference and network tasks across the ESP32-S3's dual cores.</p></div>
+        <div class="card" style="border-top:3px solid var(--navy);"><p style="font-size:.68rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem;">Protocol</p><h3 style="font-weight:700;color:var(--navy);font-size:.9rem;margin-bottom:.3rem;">HTTP → MQTT</h3><p style="font-size:.82rem;color:var(--text-mid);">Lightweight MQTT will drastically reduce telemetry latency and MCU processing load.</p></div>
+        <div class="card" style="border-top:3px solid var(--navy);"><p style="font-size:.68rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem;">ML Model</p><h3 style="font-weight:700;color:var(--navy);font-size:.9rem;margin-bottom:.3rem;">Visual Regression / FOMO</h3><p style="font-size:.82rem;color:var(--text-mid);">Replace range classification with FOMO object detection for continuous psi readings.</p></div>
+        <div class="card" style="border-top:3px solid var(--gold);"><p style="font-size:.68rem;font-weight:700;color:#92640a;text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem;">Dataset</p><h3 style="font-weight:700;color:var(--navy);font-size:.9rem;margin-bottom:.3rem;">Data Augmentation</h3><p style="font-size:.82rem;color:var(--text-mid);">Simulate extreme lighting, reflections, and debris for stronger industrial generalization.</p></div>
+      </div>
+    </div>
+
+    <hr class="div"/>
+
+    <div style="display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:1rem;">
+      <a href="projects.html" class="btn-out">← All Projects</a>
+      <a href="index.html" class="btn-primary">Back to Course Home →</a>
+    </div>
+
+  </div>
+</div>
+
+<footer style="background:var(--navy-dark);padding:2rem 1.5rem;text-align:center;border-top:3px solid var(--gold);">
+  <p style="font-size:.8rem;color:rgba(255,255,255,.3);">&#169; 2026 JMALK. All rights reserved.</p>
+</footer>
+<style>:root{--navy-dark:#001d54;}</style>
+</body>
+</html>

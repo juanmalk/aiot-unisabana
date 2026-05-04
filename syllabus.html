@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1.0"/>
+  <title>Syllabus &#8211; AIoT | Universidad de La Sabana</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <link href="https://fonts.googleapis.com/css2?family=Libre+Baskerville:wght@400;700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+  <style>
+    :root{--navy:#003087;--gold:#F5A800;--navy-dark:#001d54;--navy-light:#e8edf7;--gray-bg:#f7f8fa;--white:#fff;--text:#1a1a2e;--text-mid:#4a5568;--text-lt:#718096;--border:#e2e8f0;--gold-lt:#fff8e6;}
+    *{box-sizing:border-box;margin:0;}
+    body{background:var(--white);color:var(--text);font-family:'Inter',sans-serif;}
+    nav{position:sticky;top:0;z-index:50;background:var(--navy);border-bottom:3px solid var(--gold);box-shadow:0 2px 12px rgba(0,48,135,.2);}
+    nav a{color:rgba(255,255,255,.82);text-decoration:none;font-size:.88rem;font-weight:500;transition:color .15s;}
+    nav a:hover,nav a.active{color:var(--gold);}
+    .container{max-width:1140px;margin:0 auto;padding:0 1.5rem;}
+    .section-label{font-size:.72rem;letter-spacing:.14em;text-transform:uppercase;color:var(--gold);font-weight:700;}
+    .gold-bar{height:4px;background:var(--gold);border-radius:2px;width:48px;margin-bottom:1rem;}
+    .badge{display:inline-block;border:1px solid rgba(255,255,255,.3);color:rgba(255,255,255,.85);padding:.18rem .7rem;font-size:.68rem;letter-spacing:.09em;text-transform:uppercase;font-weight:600;border-radius:2px;text-decoration:none;}
+    .badge-gold{border-color:var(--gold);color:var(--gold);}
+    .card{background:var(--white);border:1px solid var(--border);border-radius:8px;padding:1.5rem;}
+    .syl-table{width:100%;border-collapse:separate;border-spacing:0;margin-top:2rem;}
+    .syl-table thead tr{background:var(--navy);}
+    .syl-table thead th{padding:.8rem 1rem;text-align:left;font-size:.7rem;letter-spacing:.1em;text-transform:uppercase;color:rgba(255,255,255,.8);font-weight:700;border-bottom:2px solid var(--gold);}
+    .syl-table tbody tr{transition:background .12s;}
+    .syl-table tbody tr:hover{background:var(--navy-light);}
+    .syl-table td{padding:.85rem 1rem;font-size:.875rem;vertical-align:top;border-bottom:1px solid var(--border);color:var(--text-mid);}
+    .syl-table td:first-child{color:var(--text-lt);font-family:monospace;font-size:.75rem;white-space:nowrap;font-weight:600;}
+    .topic-title{font-weight:600;color:var(--text);margin-bottom:.3rem;}
+    .topic-sub{font-size:.8rem;color:var(--text-lt);line-height:1.6;}
+    .mod-header td{background:var(--navy-light)!important;padding:.65rem 1rem;}
+    .mod-header td:first-child{border-left:4px solid var(--navy);padding-left:.8rem;}
+    .mod-label{font-weight:700;color:var(--navy);font-size:.82rem;}
+    .rl{display:inline-block;padding:.2rem .55rem;border-radius:3px;font-size:.72rem;font-weight:600;text-decoration:none;margin:.15rem .06rem;line-height:1.4;}
+    .rl-slide{background:var(--navy-light);color:var(--navy);border:1px solid rgba(0,48,135,.15);}
+    .rl-slide:hover{background:rgba(0,48,135,.12);}
+    .rl-lab{background:#fff3ee;color:#c2440d;border:1px solid rgba(255,107,53,.25);}
+    .rl-lab:hover{background:#ffe8d9;}
+    .eval-badge{display:inline-block;background:var(--gold-lt);border:1px solid rgba(245,168,0,.3);color:#92640a;padding:.1rem .5rem;border-radius:3px;font-size:.7rem;font-weight:600;}
+  </style>
+</head>
+<body>
+
+<nav>
+  <div class="container" style="display:flex;align-items:center;justify-content:space-between;padding:.9rem 1.5rem;">
+    <a href="index.html" style="display:flex;align-items:center;gap:.8rem;text-decoration:none;">
+      <div style="background:var(--gold);border-radius:5px;width:36px;height:36px;display:grid;place-items:center;flex-shrink:0;"><span style="font-weight:800;font-size:.85rem;color:var(--navy-dark);">AI</span></div>
+      <div style="line-height:1.2;"><div style="color:white;font-weight:700;font-size:.95rem;">AIoT Course</div><div style="color:rgba(255,255,255,.42);font-size:.7rem;">Universidad de La Sabana</div></div>
+    </a>
+    <div style="display:flex;gap:1.8rem;">
+      <a href="index.html">Home</a><a href="syllabus.html" class="active">Syllabus</a><a href="projects.html">Projects</a>
+    </div>
+  </div>
+</nav>
+
+<div style="background:var(--navy);padding:4rem 1.5rem 3rem;border-bottom:3px solid var(--gold);">
+  <div class="container">
+    <p class="section-label" style="color:var(--gold);margin-bottom:.5rem;">Course Syllabus</p>
+    <div class="gold-bar"></div>
+    <h1 style="font-family:'Libre Baskerville',serif;font-size:clamp(1.8rem,4vw,3rem);font-weight:700;color:white;line-height:1.15;margin-bottom:.8rem;">Syllabus &amp; Weekly Schedule</h1>
+    <p style="color:rgba(255,255,255,.65);max-width:640px;margin-bottom:1.5rem;font-size:.95rem;">5-week intensive master's course &#183; 2 credits &#183; 96 total hours (30h directed + 66h autonomous) &#183; Universidad de La Sabana, Faculty of Engineering.</p>
+    <div style="display:flex;flex-wrap:wrap;gap:.5rem;">
+      <a href="https://www.unisabana.edu.co/" target="_blank" class="badge badge-gold">Universidad de La Sabana</a>
+      <span class="badge">In-person</span>
+      <span class="badge">Master's Program</span>
+      <span class="badge">Edge Impulse Enterprise</span>
+    </div>
+  </div>
+</div>
+
+<div style="padding:2.5rem 1.5rem;background:var(--gray-bg);border-bottom:1px solid var(--border);">
+  <div class="container">
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:1rem;">
+      <div class="card" style="border-top:3px solid var(--navy);"><p style="font-size:.7rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;">Prerequisite</p><p style="font-weight:700;color:var(--navy);">None</p><p style="font-size:.8rem;color:var(--text-lt);">Open to master's students across engineering programs.</p></div>
+      <div class="card" style="border-top:3px solid var(--navy);"><p style="font-size:.7rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;">Evaluation</p><p style="font-weight:700;color:var(--navy);">Project-Based</p><p style="font-size:.8rem;color:var(--text-lt);">Application projects, rubrics, and oral/written presentations in English.</p></div>
+      <div class="card" style="border-top:3px solid var(--navy);"><p style="font-size:.7rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;">Hardware</p><p style="font-weight:700;color:var(--navy);">XIAO ESP32-S3 Sense</p><p style="font-size:.8rem;color:var(--text-lt);">+ Expansion Board + MPU6050. Programmed via Arduino IDE.</p></div>
+      <div class="card" style="border-top:3px solid var(--gold);"><p style="font-size:.7rem;color:var(--gold);font-weight:700;text-transform:uppercase;letter-spacing:.08em;margin-bottom:.3rem;">Duration</p><p style="font-weight:700;color:var(--navy);">5 Intensive Weeks</p><p style="font-size:.8rem;color:var(--text-lt);">One module per week, culminating in a live project defense.</p></div>
+    </div>
+  </div>
+</div>
+
+<div style="padding:3rem 1.5rem 5rem;">
+  <div class="container" style="overflow-x:auto;">
+    <table class="syl-table">
+      <thead>
+        <tr>
+          <th style="width:60px;">Week</th>
+          <th style="min-width:300px;">Topic</th>
+          <th style="min-width:380px;">Labs &amp; Resources</th>
+        </tr>
+      </thead>
+      <tbody>
+
+        <tr class="mod-header"><td colspan="3"><span class="mod-label">Week 1 &#8212; IoT &amp; AIoT Principles</span> <span style="color:var(--text-lt);font-size:.78rem;margin-left:.6rem;">Module 1</span></td></tr>
+        <tr>
+          <td>W01</td>
+          <td><div class="topic-title">IoT &amp; AIoT Foundations</div><div class="topic-sub">1.1 Definition, evolution, trends and challenges in IoT &#183; 1.2 IoT Architecture &amp; Ecosystem &#183; 1.3 Application domains: Smart Cities, Industry 4.0 &#183; 1.4 IoT + AI integration (AIoT) &#183; 1.5 Hardware &amp; software platforms: XIAO ESP32-S3 Sense, Edge Impulse, Ubidots</div></td>
+          <td>
+            <a href="https://docs.edgeimpulse.com/hardware/devices/mobile-phone" target="_blank" class="rl rl-lab">Motion Recognition + Anomaly Detection with Smartphone</a>
+          </td>
+        </tr>
+
+        <tr class="mod-header"><td colspan="3"><span class="mod-label">Week 2 &#8212; Machine Learning Fundamentals</span> <span style="color:var(--text-lt);font-size:.78rem;margin-left:.6rem;">Module 2</span></td></tr>
+        <tr>
+          <td>W02</td>
+          <td><div class="topic-title">ML, Deep Learning &amp; AI Workflow</div><div class="topic-sub">2.1 Supervised / Unsupervised / Reinforcement Learning &#183; 2.2 Deep Learning overview &#183; 2.3 AI workflow: Data &#8594; Features &#8594; Model &#8594; Deploy &#183; 2.4 TensorFlow / Keras introduction &#183; 2.5 Responsible AI: bias, fairness, privacy</div></td>
+          <td>
+            <a href="https://wiki.seeedstudio.com/xiao_esp32s3_getting_started/?classId=def286ec-519d-4580-b66d-a450f15d9b57" target="_blank" class="rl rl-lab">Getting Started with XIAO ESP32-S3</a>
+            <a href="https://wiki.seeedstudio.com/Seeeduino-XIAO-Expansion-Board/?classId=def286ec-519d-4580-b66d-a450f15d9b57" target="_blank" class="rl rl-lab">Expansion Board Base</a>
+            <a href="https://www.hackster.io/mjrobot/exploring-machine-learning-with-the-new-xiao-esp32s3-6463e5?classId=def286ec-519d-4580-b66d-a450f15d9b57" target="_blank" class="rl rl-lab">Motion Recognition + Anomaly Detection with XIAO ESP32-S3</a>
+          </td>
+        </tr>
+
+        <tr class="mod-header"><td colspan="3"><span class="mod-label">Week 3 &#8212; Neural Networks In Depth</span> <span style="color:var(--text-lt);font-size:.78rem;margin-left:.6rem;">Module 3</span></td></tr>
+        <tr>
+          <td>W03</td>
+          <td><div class="topic-title">Perceptrons, CNNs &amp; Training</div><div class="topic-sub">3.1 The Perceptron &#183; 3.2 Multi-Layer Perceptron (MLP) &#183; 3.3 Convolutional Neural Networks: layers, pooling, feature maps, MobileNet &#183; 3.4 Training: loss functions, Gradient Descent, Backpropagation &#183; 3.5 Evaluation: accuracy, F1, ROC-AUC &#183; 3.6 Regularization, dropout, data augmentation</div></td>
+          <td>
+            <a href="https://mlsysbook.ai/kits/contents/seeed/xiao_esp32s3/kws/kws.html?classId=def286ec-519d-4580-b66d-a450f15d9b57" target="_blank" class="rl rl-lab">Keyword Spotting (KWS)</a>
+            <a href="https://thingspeak.mathworks.com" target="_blank" class="rl rl-lab">Integration with ThingSpeak via WiFi</a>
+          </td>
+        </tr>
+
+        <tr class="mod-header"><td colspan="3"><span class="mod-label">Week 4 &#8212; AI on IoT Systems (TinyML / Edge AI)</span> <span style="color:var(--text-lt);font-size:.78rem;margin-left:.6rem;">Module 4</span></td></tr>
+        <tr>
+          <td>W04</td>
+          <td><div class="topic-title">TinyML, Quantization &amp; On-Device Deployment</div><div class="topic-sub">4.1 TinyML &amp; Edge AI: why edge, latency, privacy, MCU constraints &#183; 4.2 TensorFlow Lite Micro framework &#183; 4.3 Model compression: INT8 quantization, pruning, EON&#8482; Compiler &#183; 4.4 Deploying to Arduino/ESP32: C++ library integration &#183; IoT cloud connectivity: Ubidots, ThingSpeak, MQTT</div><div style="margin-top:.4rem;"><span class="eval-badge">Lab: Full pipeline on ESP32-S3</span></div></td>
+          <td>
+            <a href="https://mlsysbook.ai/kits/contents/seeed/xiao_esp32s3/image_classification/image_classification.html?classId=def286ec-519d-4580-b66d-a450f15d9b57" target="_blank" class="rl rl-lab">Image Classification on XIAO ESP32-S3</a>
+            <a href="https://sensecraft.seeed.cc/ai/home?classId=def286ec-519d-4580-b66d-a450f15d9b57" target="_blank" class="rl rl-lab">Data Acquisition with SenseCraft AI</a>
+          </td>
+        </tr>
+
+        <tr class="mod-header"><td colspan="3"><span class="mod-label">Week 5 &#8212; Final Project Presentations</span> <span style="color:var(--text-lt);font-size:.78rem;margin-left:.6rem;">Capstone</span></td></tr>
+        <tr>
+          <td>W05</td>
+          <td><div class="topic-title">Integration, Defense &amp; Demo</div><div class="topic-sub">Project integration &amp; end-to-end testing &#183; IoT dashboard validation &#183; Latency &amp; accuracy benchmarking &#183; IEEE-format paper submission (English) &#183; Oral defense with live hardware demo &#183; Peer evaluation &#183; Course retrospective</div><div style="margin-top:.4rem;"><span class="eval-badge">Final Paper (IEEE)</span>&nbsp;<span class="eval-badge">Oral Defense (EN)</span>&nbsp;<span class="eval-badge">Live Demo</span></div></td>
+          <td>&#8212;</td>
+        </tr>
+
+      </tbody>
+    </table>
+
+
+    <div style="margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--border);">
+      <p class="section-label" style="margin-bottom:.4rem;">Key Resources</p>
+      <div class="gold-bar"></div>
+      <h2 style="font-size:1.3rem;font-weight:700;color:var(--navy);margin-bottom:1.5rem;">Recommended Texts &amp; References</h2>
+      <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(230px,1fr));gap:1rem;">
+        <div class="card" style="border-top:3px solid var(--gold);">
+          <p style="font-size:.68rem;font-weight:700;color:var(--gold);text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem;">Main Textbook</p>
+          <h4 style="font-weight:700;color:var(--navy);margin-bottom:.3rem;">Machine Learning Systems</h4>
+          <p style="color:var(--text-mid);font-size:.82rem;margin-bottom:.6rem;">Principles and Practices of Engineering Artificially Intelligent Systems. Harvard Edge, 2024.</p>
+          <a href="https://mlsysbook.ai/book/?classId=def286ec-519d-4580-b66d-a450f15d9b57" target="_blank" style="font-size:.75rem;color:var(--navy);font-weight:600;text-decoration:none;">mlsysbook.ai &#8594;</a>
+        </div>
+        <div class="card" style="border-top:3px solid var(--navy);">
+          <p style="font-size:.68rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem;">O'Reilly</p>
+          <h4 style="font-weight:700;color:var(--navy);margin-bottom:.3rem;">AI at the Edge</h4>
+          <p style="color:var(--text-mid);font-size:.82rem;margin-bottom:.6rem;">Situnayake &amp; Plunkett, 2023. Practical guide to deploying ML models on constrained embedded devices.</p>
+          <a href="https://www.oreilly.com/library/view/ai-at-the/9781098120191/" target="_blank" style="font-size:.75rem;color:var(--navy);font-weight:600;text-decoration:none;">oreilly.com &#8594;</a>
+        </div>
+        <div class="card" style="border-top:3px solid var(--navy);">
+          <p style="font-size:.68rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem;">Microsoft</p>
+          <h4 style="font-weight:700;color:var(--navy);margin-bottom:.3rem;">IoT for Beginners</h4>
+          <p style="color:var(--text-mid);font-size:.82rem;margin-bottom:.6rem;">Free open curriculum covering IoT fundamentals, sensors, and cloud connectivity.</p>
+          <a href="https://microsoft.github.io/IoT-For-Beginners" target="_blank" style="font-size:.75rem;color:var(--navy);font-weight:600;text-decoration:none;">microsoft.github.io/IoT-For-Beginners &#8594;</a>
+        </div>
+        <div class="card" style="border-top:3px solid var(--navy);">
+          <p style="font-size:.68rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.09em;margin-bottom:.4rem;">Microsoft</p>
+          <h4 style="font-weight:700;color:var(--navy);margin-bottom:.3rem;">AI for Beginners</h4>
+          <p style="color:var(--text-mid);font-size:.82rem;margin-bottom:.6rem;">A 12-week, 24-lesson open curriculum on Artificial Intelligence for all skill levels.</p>
+          <a href="https://microsoft.github.io/AI-For-Beginners/" target="_blank" style="font-size:.75rem;color:var(--navy);font-weight:600;text-decoration:none;">microsoft.github.io/AI-For-Beginners &#8594;</a>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<div style="background:var(--navy);padding:4rem 1.5rem;border-top:3px solid var(--gold);">
+  <div class="container">
+    <p class="section-label" style="margin-bottom:.4rem;color:var(--gold);">Assessment</p>
+    <div class="gold-bar"></div>
+    <h2 style="font-size:1.6rem;font-weight:700;margin-bottom:2rem;color:white;">Grading Breakdown</h2>
+    <div style="display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1rem;">
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:1.5rem;border-top:3px solid var(--gold);"><div style="font-size:2.2rem;font-weight:800;color:var(--gold);margin-bottom:.4rem;">85%</div><h4 style="font-weight:700;color:white;margin-bottom:.3rem;">Application Projects &amp; Labs</h4><p style="color:rgba(255,255,255,.5);font-size:.82rem;">Hands-on Edge Impulse labs, weekly project milestones, in-class exercises, and the final AIoT system deployment. Evaluated via rubric.</p></div>
+      <div style="background:rgba(255,255,255,.06);border:1px solid rgba(255,255,255,.1);border-radius:8px;padding:1.5rem;border-top:3px solid rgba(255,255,255,.3);"><div style="font-size:2.2rem;font-weight:800;color:white;margin-bottom:.4rem;">15%</div><h4 style="font-weight:700;color:white;margin-bottom:.3rem;">Scientific Paper Analysis &amp; Presentation</h4><p style="color:rgba(255,255,255,.5);font-size:.82rem;">Analysis and oral presentation of a peer-reviewed scientific paper related to an AIoT use case. Assessed on depth of understanding, critical thinking, and clarity of communication.</p></div>
+    </div>
+  </div>
+</div>
+
+<footer style="background:var(--navy-dark);padding:2rem 1.5rem;text-align:center;border-top:1px solid rgba(255,255,255,.1);">
+  <p style="font-size:.8rem;color:rgba(255,255,255,.3);">&#169; 2026 JMALK. All rights reserved.</p>
+</footer>
+<style>:root{--navy-dark:#001d54;}</style>
+</body>
+</html>
