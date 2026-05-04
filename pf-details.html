@@ -41,7 +41,33 @@
     .pipe-icon{font-size:1.3rem;margin-bottom:.3rem;}
     .pipe-label{font-size:.68rem;font-weight:700;color:var(--navy);text-transform:uppercase;letter-spacing:.07em;margin-bottom:.2rem;}
     .pipe-val{font-size:.76rem;color:var(--text-lt);}
-    @media(max-width:640px){.pipeline{flex-direction:column}.pipe-step:not(:last-child)::after{content:'↓';right:50%;transform:translateX(50%);top:auto;bottom:-14px;}.two-col{grid-template-columns:1fr!important}.three-col{grid-template-columns:1fr!important}}
+    @media(max-width:768px){
+      nav .container-wide{padding:.7rem 1rem;}
+      nav div:last-child{gap:1rem;}
+      nav a{font-size:.8rem;}
+      .two-col{grid-template-columns:1fr!important;}
+      .three-col{grid-template-columns:1fr!important;}
+      .pipeline{flex-direction:column;}
+      .pipe-step:not(:last-child)::after{content:'↓';right:50%;transform:translateX(50%);top:auto;bottom:-14px;}
+      .codeblock{font-size:.7rem;}
+    }
+    @media(max-width:480px){
+      nav div:last-child{gap:.7rem;}
+      nav a{font-size:.75rem;}
+    }
+
+    /* ── Hamburger ── */
+    .nav-links{display:flex;gap:1.8rem;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.3rem;}
+    .hamburger span{display:block;width:22px;height:2px;background:white;border-radius:2px;transition:all .25s;}
+    .mobile-menu{display:none;position:fixed;top:57px;left:0;right:0;background:var(--navy);border-bottom:3px solid var(--gold);padding:1rem 1.5rem;z-index:49;flex-direction:column;gap:.2rem;}
+    .mobile-menu a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.95rem;font-weight:500;padding:.65rem 0;border-bottom:1px solid rgba(255,255,255,.08);display:block;}
+    .mobile-menu a:last-child{border-bottom:none;}
+    .mobile-menu.open{display:flex;}
+    @media(max-width:768px){
+      .nav-links{display:none!important;}
+      .hamburger{display:flex!important;}
+    }
   </style>
 </head>
 <body>
@@ -52,7 +78,7 @@
       <div style="background:var(--gold);border-radius:5px;width:36px;height:36px;display:grid;place-items:center;flex-shrink:0;"><span style="font-weight:800;font-size:.85rem;color:var(--navy-dark);">AI</span></div>
       <div style="line-height:1.2;"><div style="color:white;font-weight:700;font-size:.95rem;">AIoT Course</div><div style="color:rgba(255,255,255,.42);font-size:.7rem;">Universidad de La Sabana</div></div>
     </a>
-    <div style="display:flex;gap:1.8rem;"><a href="index.html">Home</a><a href="syllabus.html">Syllabus</a><a href="projects.html">Projects</a></div>
+    <div class="nav-links"><a href="index.html">Home</a><a href="syllabus.html">Syllabus</a><a href="projects.html">Projects</a></div>
   </div>
 </nav>
 

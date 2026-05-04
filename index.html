@@ -46,7 +46,39 @@
     footer{background:var(--navy-dark);color:rgba(255,255,255,.7);padding:3rem 1.5rem;}
     @keyframes fadeUp{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:none}}
     .au{animation:fadeUp .65s ease both}.d1{animation-delay:.12s}.d2{animation-delay:.24s}.d3{animation-delay:.36s}
-    @media(max-width:640px){.two-col{grid-template-columns:1fr!important}.ft-grid{grid-template-columns:1fr!important}}
+    /* ── Responsive ── */
+    @media(max-width:768px){
+      .hero{padding:4rem 1rem 3rem;}
+      nav .container{padding:.7rem 1rem;}
+      nav div:last-child{gap:1rem;}
+      nav a{font-size:.8rem;}
+      section{padding:3rem 1rem;}
+      .two-col{grid-template-columns:1fr!important;}
+      .ft-grid{grid-template-columns:1fr!important;}
+      .proj-grid{grid-template-columns:1fr!important;}
+      .stat-num{font-size:1.3rem;}
+      /* next offering */
+      .offering-inner{flex-direction:column!important;gap:1.5rem!important;}
+    }
+    @media(max-width:480px){
+      nav div:last-child{gap:.7rem;}
+      nav a{font-size:.75rem;}
+      .partner-pill span:last-child{display:none;}
+      h1{font-size:2rem!important;}
+    }
+
+    /* ── Hamburger ── */
+    .nav-links{display:flex;gap:1.8rem;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.3rem;}
+    .hamburger span{display:block;width:22px;height:2px;background:white;border-radius:2px;transition:all .25s;}
+    .mobile-menu{display:none;position:fixed;top:57px;left:0;right:0;background:var(--navy);border-bottom:3px solid var(--gold);padding:1rem 1.5rem;z-index:49;flex-direction:column;gap:.2rem;}
+    .mobile-menu a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.95rem;font-weight:500;padding:.65rem 0;border-bottom:1px solid rgba(255,255,255,.08);display:block;}
+    .mobile-menu a:last-child{border-bottom:none;}
+    .mobile-menu.open{display:flex;}
+    @media(max-width:768px){
+      .nav-links{display:none!important;}
+      .hamburger{display:flex!important;}
+    }
   </style>
 </head>
 <body>
@@ -57,7 +89,7 @@
       <div style="background:var(--gold);border-radius:5px;width:36px;height:36px;display:grid;place-items:center;flex-shrink:0;"><span style="font-weight:800;font-size:.85rem;color:var(--navy-dark);">AI</span></div>
       <div style="line-height:1.2;"><div style="color:white;font-weight:700;font-size:.95rem;">AIoT Course</div><div style="color:rgba(255,255,255,.45);font-size:.7rem;">Universidad de La Sabana</div></div>
     </a>
-    <div style="display:flex;gap:1.8rem;">
+    <div class="nav-links">
       <a href="index.html" class="active">Home</a>
       <a href="syllabus.html">Syllabus</a>
       <a href="projects.html">Projects</a>

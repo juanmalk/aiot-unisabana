@@ -36,6 +36,40 @@
     .rl-lab{background:#fff3ee;color:#c2440d;border:1px solid rgba(255,107,53,.25);}
     .rl-lab:hover{background:#ffe8d9;}
     .eval-badge{display:inline-block;background:var(--gold-lt);border:1px solid rgba(245,168,0,.3);color:#92640a;padding:.1rem .5rem;border-radius:3px;font-size:.7rem;font-weight:600;}
+    /* ── Responsive ── */
+    @media(max-width:768px){
+      nav .container{padding:.7rem 1rem;}
+      nav div:last-child{gap:1rem;}
+      nav a{font-size:.8rem;}
+      /* Scrollable table on mobile */
+      .syl-table{font-size:.78rem;}
+      .syl-table th,.syl-table td{padding:.6rem .7rem;}
+      .topic-sub{font-size:.74rem;}
+      /* Info cards */
+      [style*="repeat(auto-fit,minmax(200px"]{grid-template-columns:1fr 1fr!important;}
+      /* Key resources */
+      [style*="repeat(auto-fit,minmax(230px"]{grid-template-columns:1fr!important;}
+      /* Assessment */
+      [style*="repeat(auto-fit,minmax(220px"]{grid-template-columns:1fr!important;}
+    }
+    @media(max-width:480px){
+      nav div:last-child{gap:.7rem;}
+      [style*="repeat(auto-fit,minmax(200px"]{grid-template-columns:1fr!important;}
+      .syl-table{font-size:.72rem;}
+    }
+
+    /* ── Hamburger ── */
+    .nav-links{display:flex;gap:1.8rem;}
+    .hamburger{display:none;flex-direction:column;gap:5px;cursor:pointer;background:none;border:none;padding:.3rem;}
+    .hamburger span{display:block;width:22px;height:2px;background:white;border-radius:2px;transition:all .25s;}
+    .mobile-menu{display:none;position:fixed;top:57px;left:0;right:0;background:var(--navy);border-bottom:3px solid var(--gold);padding:1rem 1.5rem;z-index:49;flex-direction:column;gap:.2rem;}
+    .mobile-menu a{color:rgba(255,255,255,.85);text-decoration:none;font-size:.95rem;font-weight:500;padding:.65rem 0;border-bottom:1px solid rgba(255,255,255,.08);display:block;}
+    .mobile-menu a:last-child{border-bottom:none;}
+    .mobile-menu.open{display:flex;}
+    @media(max-width:768px){
+      .nav-links{display:none!important;}
+      .hamburger{display:flex!important;}
+    }
   </style>
 </head>
 <body>
@@ -46,7 +80,7 @@
       <div style="background:var(--gold);border-radius:5px;width:36px;height:36px;display:grid;place-items:center;flex-shrink:0;"><span style="font-weight:800;font-size:.85rem;color:var(--navy-dark);">AI</span></div>
       <div style="line-height:1.2;"><div style="color:white;font-weight:700;font-size:.95rem;">AIoT Course</div><div style="color:rgba(255,255,255,.42);font-size:.7rem;">Universidad de La Sabana</div></div>
     </a>
-    <div style="display:flex;gap:1.8rem;">
+    <div class="nav-links">
       <a href="index.html">Home</a><a href="syllabus.html" class="active">Syllabus</a><a href="projects.html">Projects</a>
     </div>
   </div>
@@ -79,7 +113,8 @@
 </div>
 
 <div style="padding:3rem 1.5rem 5rem;">
-  <div class="container" style="overflow-x:auto;">
+  <div class="container">
+  <div style="overflow-x:auto;-webkit-overflow-scrolling:touch;border-radius:6px;">
     <table class="syl-table">
       <thead>
         <tr>
@@ -139,7 +174,7 @@
 
       </tbody>
     </table>
-
+    </div><!-- end scroll wrapper -->
 
     <div style="margin-top:3rem;padding-top:2.5rem;border-top:1px solid var(--border);">
       <p class="section-label" style="margin-bottom:.4rem;">Key Resources</p>
